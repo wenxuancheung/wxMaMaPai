@@ -1,0 +1,53 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/vip/vip",
+    "pages/coupon/coupon",
+    "pages/selfCenter/selfCenter",
+    "pages/activity/activity",
+    "pages/familyActivity/familyActivity",
+    "pages/familyTravel/familyTravel",
+    "pages/profession/profession",
+    "pages/familyMovie/familyMovie",
+    "pages/handWork/handWork",
+    "pages/goods/goods",
+    "pages/activityDetail/activityDetail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#FFC515",
+    "navigationBarTitleText": "惠州妈妈派",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar" : {
+    "color" : "#ddd",
+    "selectedColor" : "#FFD233",
+    "borderStyle": "black",
+    "backgoundColor": "white",
+    "list" : [{
+      "pagePath" : "pages/index/index",
+      "iconPath" : "images/mother_index_select.jpg",
+      "selectedIconPath" : "images/mother_index.jpg",
+      "text" : "首页" 
+    },
+    {
+      "pagePath" : "pages/vip/vip",
+      "iconPath" : "images/mother_vip.jpg",
+      "selectedIconPath" : "images/mother_vip_select.jpg",
+      "text" : "会员" 
+    },
+    {
+      "pagePath" : "pages/coupon/coupon",
+      "iconPath" : "images/mother_coupon.jpg",
+      "selectedIconPath" : "images/mother_coupon_select.jpg",
+      "text" : "电子券" 
+    },
+    {
+      "pagePath" : "pages/selfCenter/selfCenter",
+      "iconPath" : "images/mother_selfCenter.jpg",
+      "selectedIconPath" : "images/mother_selfCenter_select.jpg",
+      "text" : "个人中心" 
+    }
+  ]
+  }
+}

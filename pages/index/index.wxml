@@ -1,0 +1,100 @@
+<!--index.wxml-->
+<view bindtouchstart = "handletouchtart" bindtouchmove="handletouchmove">
+  <view wx:if="{{loading}}">
+    <loading>~欢乐加载中~</loading>
+  </view>
+  <view class="swiper" wx:else> 
+    <swiper indicator-dots="true" autoplay="true" >
+      <block wx:for="{{imgUrls}}" wx:key="key">
+        <swiper-item>
+          <image src="{{item}}"/>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="navLists">
+    	<block wx:for="{{navLists}}">
+        <navigator url='{{item.url}}'>
+          <view class="navIcon">
+    			  <image src="{{item.image}}"/>
+            <text>{{item.title}}</text>
+    		  </view>
+        </navigator>
+    	</block>
+    </view>
+    <view class="getCoupon" >
+      <text class='getCouponText'>
+        领取优惠券
+      </text>
+      <view class="familyCard" wx:for="{{famliyCoupon}}">
+        <navigator url='{{item.url}}'>
+          <view class="familyCardImg">
+            <image  src="{{item.image}}"/>
+          </view>
+          <view class="middleText">
+            <text class="mainText">{{item.mainText}}</text>
+            <view><text class="feeText">占位费¥{{item.feeText}}</text></view>
+            <view  class="iconText"><image src="../../images/happyTown.jpg"></image><text>{{item.iconText}}</text></view>
+          </view>
+          <view class="feeBuy">
+            <view class="quickBuy"><text>立即购买</text></view>
+            <text class="getCouponBuyText">消费返全额</text>
+          </view>
+        </navigator>
+      </view>
+    </view>
+    <view class='selective'>
+      <view >
+        <text class='selectiveText'>优选吃喝玩乐</text>
+        <navigator url='../activity/activity'><text class='rightMore'>更多></text></navigator>
+      </view>
+      <view wx:for="{{shop_list}}" class='shopList'>
+        <view class='shopListImg'><image src="{{item.image}}"></image></view>
+        <view class='shopListText'>
+          <view class='shopListName'>
+            <image src='../../images/happyTown.jpg'></image>{{item.name}}
+          </view>
+          <view class='shopListDiscount'>亲子卡专享{{item.discount}}折</view>
+          <view class='shopListInfo'>{{item.info}}</view>
+        </view>
+      </view>
+      <view class='playFunView' >
+        <view class='playFunInfoView' wx:for="{{play_fun_list}}">
+          <navigator url='{{item.url}}'>
+            <image src='{{item.image}}'></image>
+            <text class='playFunViewName'>{{item.name}}</text>
+            <text class='playFunViewMoney'>¥{{item.money}}<text class='playFunViewMoneyDel'>￥{{item.old_price}}</text></text>
+            <text class='playFunViewSale'>已售{{item.sales}}份</text>
+          </navigator>
+          
+        </view>
+      </view>
+    </view>
+    <!--设上边框-->
+    <view class='activityRecommend'>
+      <!--设左右外边距-->
+      <view class='activityRecommendBody'> 
+        <view >
+          <text class='activityRecommendText'>活动推荐</text>
+          <navigator url='../activity/activity'><text class='more'>更多></text></navigator>
+        </view>
+        <view wx:for="{{activity_list}}" class='activity'>
+          <navigator url='{{item.url}}'>
+            <view><image src='{{item.image}}'></image></view>
+            <view><text class='activityName'>{{item.name}}</text></view>
+            <view><text class='activityMoney'>¥ {{item.money}} </text><text class='activityDiscount'>  亲子卡价 | ¥ {{item.discount}} </text><text class='activityDate'>{{item.date}} · 剩余{{item.last}}</text></view>
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="floatBot" hidden='{{hidden}}'>
+  <button bindtap='toVip'>
+    <text>亲子卡¥188</text><span>原价¥238</span>
+    <view id='floatBotBuy'>立即购买</view>
+  </button>
+</view>
+<view class="toTopArea" hidden='{{isHidden}}'>
+  <view class="service"><button open-type='contact'><text>客服</text></button></view> 
+  <view class="to_top"><button bindtap='toTopArea'><text>↑</text></button></view>
+</view>

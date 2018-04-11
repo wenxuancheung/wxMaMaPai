@@ -1,0 +1,39 @@
+<!--index.wxml-->
+<view handletouchmove="handletouchmove" handletouchtart="handletouchtart" wx:if="{{hiddenLoading}}">
+      <loading >~欢乐加载中~</loading>
+</view>
+<view wx:else bindtouchstart = "handletouchtart" bindtouchmove="handletouchmove">
+  <view class='vipImg'><image src='{{img_src}}'></image></view>
+  <view class='phoneNumber' >
+    <button bindtap='number'>
+      <text>绑定手机号码</text>
+    </button>
+  </view>
+  <swiper class="swiper" vertical="true" autoplay="true" circular="true" interval="2000">
+    <block wx:for="{{infoList}}">
+      <navigator url="../../activity/activity">
+        <swiper-item>
+          <view class='swiperView'>
+            <image src='{{item.image}}'></image>
+            <text class="swiperAct">{{item.activity}}</text>
+            <text class="swiperInfo">{{item.info}}</text>
+          </view>
+        </swiper-item>
+      </navigator>
+    </block>
+  </swiper>
+  <view class='familyCard'>
+  <text class='familyCardTitle'>亲子卡特权</text>
+  <rich-text nodes="{{rich_arr_content}}" class='richText'></rich-text>
+  </view>
+  <view class="floatBot" hidden='{{hidden}}'>
+    <button bindtap='number'>
+      绑定手机号码
+    </button>
+  </view>
+
+</view>
+<view class="toTopArea" hidden='{{isHidden}}'>
+  <view class="service"><button open-type='contact'><text>客服</text></button></view> 
+  <view class="to_top"><button bindtap='toTopArea'><text>↑</text></button></view>
+</view>

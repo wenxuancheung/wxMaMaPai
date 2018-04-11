@@ -1,0 +1,54 @@
+/* pages/coupon/coupon.wxss */
+.buyForm{
+  margin: 50% auto;
+  width: 80%;
+  height: 60%;
+  border-radius: 20rpx;
+  position: relative;
+  background-color: #F8F8F8;
+}
+.cancel{
+  float: right;
+  position: absolute;
+  top: -90rpx;
+  left: 90%;
+  height: 50rpx;
+  width: 50rpx;
+}
+.text{
+  text-align: center;
+  display: block;
+  color: white;
+  background-color: #FFC515;
+  font-size: 35rpx;
+  height: 100rpx;
+  line-height:100rpx;
+  border-radius: 20rpx 20rpx 0 0;
+}
+.phone{
+  border-bottom: 1rpx solid #E0E0E0;
+  display: block;
+  margin-bottom: 30rpx;
+}
+.check{
+  width: 50%;
+  border-bottom: 1rpx solid #E0E0E0;
+  display:inline-block;
+}
+.form{
+  display: block;
+  margin:50rpx
+}
+.submit{
+  width: 95%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 35rpx;
+  color: white;
+  background-color: #FFC515;
+  margin-top: 50rpx;
+}
+.but{
+  border: #595959 1rpx solid;
+  color: #595959;
+}

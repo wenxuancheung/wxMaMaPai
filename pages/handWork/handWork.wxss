@@ -1,0 +1,32 @@
+/* pages/handWork/handWork.wxss */
+.activity{
+  width: 100%;
+  margin :50rpx 0 50rpx 50rpx;
+}
+.activityImage{
+  width: 88%;
+  height: 350rpx;
+}
+.activityName{
+  font-size: 40rpx;
+  font-weight: bold;
+  display: block;
+  margin: 10rpx 0;
+}
+.activityMoney{
+  font-size: 30rpx;
+}
+.activityDiscount{
+  font-size: 32rpx;
+  color: #D68C59;
+  border: 1rpx solid #D68C59; 
+  border-radius: 10rpx;
+  margin-left: 10rpx;
+}
+.activityDate{
+  margin-top: 5rpx;  
+  float: right;
+  font-size: 28rpx;
+  color:#5F5F5F;
+  margin-right: 90rpx;
+}

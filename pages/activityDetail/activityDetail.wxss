@@ -1,0 +1,41 @@
+/* pages/activityDetail/activityDetail.wxss */
+.btn{
+  position: fixed;
+  width: 100%;
+  background-color: #FFC515;
+  color:#fff;
+  top:92%;
+  text-align: center;
+}
+.image{
+  width: 100%;
+}
+.title{
+  font-weight: bold;
+  font-size: 45rpx;
+  margin: 25rpx;
+}
+.text{
+  display: inline;
+  font-size: 25rpx;
+  margin-top: 40rpx;
+}
+.textImg{
+  width: 30rpx;
+  height: 20rpx;
+  margin : 40rpx 0 0 25rpx;
+}
+.share{
+  float: right;
+  color:#fff;
+  background-color: #FE7520;
+  width: 170rpx;
+  height: 70rpx;
+  border-radius: 30rpx;
+  font-size: 27rpx;
+  margin-right: 25rpx;
+}
+.bottom {
+  padding-bottom: 50rpx;
+  border-bottom: 5rpx solid #ECECEC;
+}

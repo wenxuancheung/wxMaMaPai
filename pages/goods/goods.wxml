@@ -1,0 +1,16 @@
+<!--pages/goods/goods.wxml-->
+<view wx:for="{{goods_list}}">
+  <view><image src='{{item.url}}' class='images'></image></view>
+  <view>
+    <view class='main'>
+      <view><button open-type='share' class='share'><image src='../../images/share.jpg' class='share'></image></button>
+      <text class='title'>{{item.title}}</text>
+      </view>
+    </view>
+    <view class='money'><text class='newPrice'>¥{{item.money}} </text><image src='../../images/Card.jpg'></image><text class='oldPrice'> {{item.old_price}}</text></view>
+    <view><image class='banner' src='../../images/banner.jpg'></image></view>
+    <view><text class='notice'>购买须知</text><rich-text nodes="{{rich_arr_content}}"></rich-text></view>
+  </view>
+</view>
+
+<view><button class='btn'>立即购买</button></view>

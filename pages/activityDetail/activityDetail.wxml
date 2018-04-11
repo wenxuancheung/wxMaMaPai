@@ -1,0 +1,15 @@
+<!--pages/activityDetail/activityDetail.wxml-->
+<view wx:for="{{activity_list}}">
+  <view >
+    <image src='{{item.image}}' class='image'></image></view>
+  <view>
+    <text class='title'>{{item.title}}
+    </text>
+  </view>
+  <view class='bottom'><image src='../../images/eye.jpg' class='textImg'></image><text class='text'>{{item.number}}</text><button open-type='share' class='share'>邀请好友</button></view>
+  <view>
+    <rich-text nodes="{{rich_arr_content}}"></rich-text>
+  </view>
+</view>
+
+<view><button class='btn'>立即参加</button></view>

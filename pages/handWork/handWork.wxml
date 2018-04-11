@@ -1,0 +1,11 @@
+<view wx:for="{{activity_list}}" class='activity'>
+  <navigator url='{{item.url}}'>
+    <view><image src="{{item.image}}"  class='activityImage'></image></view>
+    <view >
+      <view><text class='activityName'>{{item.name}}</text></view>
+      <text class='activityMoney'>¥ {{item.money}}</text><text class='activityDiscount'>  亲子卡价 | ¥ {{item.discount}} </text>
+      <text class='activityDate'> {{item.date}} · 剩余{{item.last}}</text>
+    </view>
+  </navigator>
+
+</view>

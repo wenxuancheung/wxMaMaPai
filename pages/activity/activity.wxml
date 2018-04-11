@@ -1,0 +1,28 @@
+<view class="navbar"> 
+ <text wx:for="{{navbar}}" data-index="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text> 
+</view> 
+  
+<view wx:if="{{currentTab==0}}"> 
+ <view wx:for="{{eat_drink}}" class="mainView">
+  <navigator url='{{item.url}}'>
+    <image class="eatDrinkImg" src='{{item.image}}'></image>
+    <view>
+      <text class="mainText">{{item.mainText}}</text>
+      <view><text class="moneyText">¥{{item.moneyText}}</text>
+        <view class="saleText">已售{{item.saleText}}分</view>
+      </view>
+    </view>
+  </navigator>
+ </view>
+</view> 
+  
+<view wx:if="{{currentTab==1}}" class='haveFun'>  
+  <view wx:for="{{have_fun_list}}" class='haveFunView'>
+    <navigator url='{{item.url}}'>
+      <view><image src='{{item.image}}'  class='haveFunImg'></image></view>
+      <view class='haveFunName'><text>{{item.name}}</text></view>
+      <view><text class='haveFunMoney'>¥{{item.money}}</text><text class='haveFunSale'>已售出{{item.sale}}份</text></view>
+    </navigator> 
+  </view>
+</view> 
+  

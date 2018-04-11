@@ -1,0 +1,9 @@
+<view class='buyForm' hidden='{{hidden}}'>
+  <icon bindtap='cancel' type='cancel' class='cancel'></icon>
+  <text class='text'>验证手机购买</text>
+  <form class='form'>
+    <input name='input' placeholder='手机号' class='phone'></input>
+    <input name='input' placeholder='验证码' class='check' maxlength='6'></input><button size='mini' class='but' bindtap='get' disabled='{{disabled}}'>{{number}}</button>
+    <button formType="submit" class='submit'>提交</button>
+  </form>
+</view>

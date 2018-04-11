@@ -1,0 +1,62 @@
+/* pages/selfCenter/selfCenter.wxss */
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url('http://cdn.osxdaily.com/wp-content/uploads/2014/01/bright-orange-apple-logo.jpg');
+  width: 100%;
+  height: 300rpx
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  display: block;
+}
+
+.userinfo-nickname {
+  color: #FFF1D6;
+}
+
+.user {
+  margin-top: 50rpx;
+}
+
+
+.view{
+  width: 100%;
+  display: inline-block;
+  height: 150rpx;
+}
+.images{
+  width: 100rpx;
+  height: 100rpx;
+  float: left;
+}
+.text{
+  border-bottom: 5rpx #D7D7D7 solid;
+  font-size: 35rpx;
+  display: block;
+}
+.span{
+  float: right;
+  color: #CFCFCF;
+  font-size: 50rpx;
+  margin-right: 50rpx;
+  padding-bottom: 20rpx;
+}
+
+button::after{
+    border:none;
+}
+button{
+    padding: 0;
+    display: block;
+    position: none;
+    line-height: 100rpx;
+    text-align: left;
+    background-color: #fff
+
+}
